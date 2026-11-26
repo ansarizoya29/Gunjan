@@ -1,0 +1,351 @@
+
+/* =========================
+   SWEET BLISS BAKERY
+   PREMIUM CSS DESIGN
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf7;
+    color: #422b2b;
+}
+
+/* NAVBAR */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.06);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #c44569;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #422b2b;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #e65b83;
+}
+
+/* HERO SECTION */
+
+.hero {
+    height: 620px;
+    background:
+    linear-gradient(90deg, rgba(40,15,20,0.65), rgba(0,0,0,0.1)),
+    url("https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1600");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: slideUp 1s ease;
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: #fff0f0;
+}
+
+/* BUTTONS */
+
+.btn, .buy-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #c44569, #f07899);
+    color: white;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(196,69,105,0.25);
+}
+
+.btn:hover, .buy-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(196,69,105,0.4);
+}
+
+/* CAKES SECTION */
+
+.cakes {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.cakes h2,
+.about h2,
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #a83255;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #917b7b;
+    margin-bottom: 55px;
+}
+
+/* CAKE GRID */
+
+.cake-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.cake-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(90,40,50,0.08);
+    padding-bottom: 30px;
+    transition: 0.4s;
+    border: 1px solid #f8e9e9;
+}
+
+.cake-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(196,69,105,0.18);
+}
+
+.cake-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.cake-card:hover img {
+    transform: scale(1.07);
+}
+
+.cake-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 20px 0 10px;
+    color: #633b42;
+}
+
+.cake-card p {
+    color: #968080;
+    font-size: 14px;
+    padding: 0 15px;
+    min-height: 40px;
+}
+
+.cake-card h4 {
+    font-size: 25px;
+    color: #c44569;
+    margin: 18px 0;
+}
+
+.buy-btn {
+    padding: 11px 28px;
+    font-size: 14px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 100px 15%;
+    text-align: center;
+    background: linear-gradient(135deg, #ffe5eb, #fff2e8);
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 2;
+    color: #73565b;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    padding: 90px 20px;
+    text-align: center;
+    background: #fffaf7;
+}
+
+.contact > p {
+    color: #917b7b;
+}
+
+.contact form {
+    max-width: 550px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #f0dada;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #d34e76;
+    box-shadow: 0 0 8px rgba(211,78,118,0.15);
+}
+
+.contact textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.contact button {
+    background: linear-gradient(45deg, #c44569, #f07899);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(196,69,105,0.3);
+}
+
+/* FOOTER */
+
+footer {
+    background: #40252b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+/* ANIMATION */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+    .cake-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h2 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 480px;
+        padding: 0 7%;
+    }
+
+    .hero-content h2 {
+        font-size: 38px;
+    }
+
+    .cake-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cakes h2,
+    .about h2,
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .contact form {
+        padding: 20px;
+    }
+}
